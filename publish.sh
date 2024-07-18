@@ -28,13 +28,7 @@ echo
 echo "Rubygems Authority: $rubygems_authority_path"
 echo "Rubygems Access Key: ${rubygems_authority_access_key:-(none)}"
 
-if [ -z "${EXAMPLE_ORGANIZATION_HOME:-}" ]; then
-  echo
-  printf "\n\e[31mError: EXAMPLE_ORGANIZATION_HOME is not set\e[m\n"
-  false
-fi
-
-for gem in {.,*}/*.gem; do
+for gem in $(find . -maxdepth 2 -name '*.gem'); do
   echo
 
   cmd="gem push"
