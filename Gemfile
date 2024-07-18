@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source ENV.fetch('EVENTIDE_CORE_RUBYGEMS_AUTHORITY')
 
 gemspec
 
