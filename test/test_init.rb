@@ -8,3 +8,7 @@ puts RUBY_DESCRIPTION
 require_relative '../init'
 
 require 'test_bench'; TestBench.activate
+
+require 'digest/hash/controls'
+
+Controls = Digest::Hash::Controls

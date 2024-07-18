@@ -1,13 +1,13 @@
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
-  s.name = 'TEMPLATE_GEM_NAME'
+  s.name = 'digest-hash'
   s.version = '0.0.0.0'
-  s.summary = "Some summary"
+  s.summary = "64-bit hashing algorithm"
   s.description = ' '
 
   s.authors = ['The Eventide Project']
   s.email = 'opensource@eventide-project.org'
-  s.homepage = 'https://github.com/eventide-core/TEMPLATE_REPO_NAME'
+  s.homepage = 'https://github.com/eventide-core/digest-hash'
   s.licenses = %w(MIT)
 
   s.require_paths = %w(lib)
