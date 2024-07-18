@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/Usr/bin/env bash
 
 set -eEuo pipefail
 
@@ -20,7 +20,7 @@ echo
 echo "Remote Name: $git_remote_name"
 echo "Default Branch: $git_default_branch"
 
-for gemspec in {.,*}/*.gemspec; do
+for gemspec in $(find . -maxdepth 2 -name '*.gemspec'); do
   echo
   path="$(dirname "$gemspec")"
   gem -C "$path" build --force "$(basename "$gemspec")"
