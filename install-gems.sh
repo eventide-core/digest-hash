@@ -48,6 +48,14 @@ fi
 echo $cmd
 eval "$cmd"
 
+project_gems=($(
+  find . -maxdepth 2 -type f -name '*gemspec' |
+    ruby -rrubygems -n -e 'spec = Gem::Specification.load($_.chomp); puts spec.name')
+)
+cmd="gem uninstall --no-user-install ${project_gems[@]}"
+echo -e "\n$cmd"
+eval "$cmd"
+
 echo
 echo "Generating gems/gems_init.rb"
 echo "- - -"
